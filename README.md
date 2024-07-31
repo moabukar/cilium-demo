@@ -4,7 +4,9 @@
 - And to get bettet with K8s networking.
 
 
-- Create an ubuntu and ssh into it
+## Setup env
+
+Create an ubuntu machine and SSH into it
 
 ```bash
 
