@@ -73,3 +73,47 @@ kubectl delete pod client web
 
 ## Services
 
+```bash
+
+kubectl create deployment website --replicas=3 --image=httpd
+kubectl get deploy
+kubectl get pod --show-labels
+```
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: website
+spec:
+  ports:
+  - port: 80
+    name: http
+  selector:
+    app: website
+
+```
+
+```bash
+kubectl apply -f service.yaml
+kubectl get service
+
+```
+
+`kubectl cluster-info dump | grep -m 1 service-cluster-ip-range`
+
+
+`kubectl get endpoints website`
+`curl <YOUR SERVICE CLUSTER IP>`
+
+## Service routing
+
+```bash
+## check svc the NAT table:
+sudo iptables -L -vn -t nat | grep '<YOUR SERVICE CLUSTER IP>'
+## rule chain
+sudo iptables -L -vn -t nat | grep -A4 '<CHAIN NAME>'
+
+
+```
+
