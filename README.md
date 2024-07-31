@@ -1,1 +1,3 @@
-# Lab/demo to play with Cilium (CNI for K8s)
+# Cilium demo
+
+- Lab/demo to play with Cilium (CNI for K8s)
