@@ -1,7 +1,7 @@
 # Cilium demo
 
 - Lab/demo to play with Cilium (CNI for K8s)
-- And to get bettet with K8s networking.
+- And to get better with K8s networking.
 
 
 ## Setup env
